@@ -18,7 +18,7 @@ def get_file_content(working_directory, file_path):
         with open(target_path, "r") as f:
             file_content_string = f.read(MAX_CHARS)
         
-        return file_content_string
+        return {"result" : file_content_string}
 
     except Exception as e:
         return f"Error: {e}"

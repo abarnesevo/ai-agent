@@ -14,7 +14,7 @@ def write_file(working_directory, file_path, content):
         with open(target_path, "w") as f:
             f.write(content)
 
-        return f'Successfully wrote to "{file_path}" ({len(content)} characters written)'
+        return f'Successfully wrote to "{file_path}" ({len(content)} characters written), content:{content}'
 
     except Exception as e:
         return f"Error: {e}"

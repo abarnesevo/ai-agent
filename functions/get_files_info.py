@@ -17,10 +17,10 @@ def get_files_info(working_directory, directory=None):
         dir_contents = []
         for content in os.listdir(abs_target_path):
             dir_contents.append(
-        f"- {content}: file_size={os.path.getsize(os.path.join(abs_target_path,content))}, is_dir={os.path.isfile(os.path.join(abs_target_path,content))}"
+        f"- {content}: file_size={os.path.getsize(os.path.join(abs_target_path,content))}, is_dir={os.path.isdir(os.path.join(abs_target_path,content))}"
         )
         
-        return "\n".join(dir_contents)
+        return f"{directory}\n" + "\n".join(dir_contents)
 
 
     except Exception as e:
